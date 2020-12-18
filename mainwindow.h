@@ -21,5 +21,6 @@ private:
     //std::priority_queue<Entry,> *queue;
 private slots:
     //void saveEntry();
+
 };
 #endif // MAINWINDOW_H
