@@ -2,17 +2,20 @@
 #define ENTRY_H
 
 #include <QString>
+#include <chrono>
 
 
 class Entry{
     public:
     Entry(QString title){
         this->title = title;
+        const auto p1 = std::chrono::system_clock::now();
+        deltaTime = 
     }
     int getTime() const {return deltaTime; }
     private:
     QString title;
-    int deltaTime;
+    const int deltaTime;
 
 };
 
