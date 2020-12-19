@@ -6,6 +6,7 @@
 #include "Entry.h"
 
 QT_BEGIN_NAMESPACE
+
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
@@ -19,9 +20,10 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    std::priority_queue<Entry,std::vector<Entry>,CompareDate> *queue;
+    std::priority_queue<Entry,std::vector<Entry>,CompareDate> queue;
 private slots:
-    //void saveEntry();
+    void saveEntry();
+    void removeEntry();
 
 };
 #endif // MAINWINDOW_H
