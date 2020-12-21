@@ -3,24 +3,26 @@
 
 #include <QString>
 #include <chrono>
-#include "enums.h"
 
+using namespace std::chrono;
 
 class Entry{
     public:
-    Entry(QString title);
+    Entry(QString title){
+        this->title = title;
+        deltaTime = std::time(0);
 
+
+    }
     int getTime() const {return deltaTime; }
     int getPriority();
     QString getTitle() const {return title; }
 
     private:
-
     QString title;
     int deltaTime;
-    int intParameterSize = 0;
     std::unordered_map<std::string,int> parameters;
-    std::vector<type> parameterTypes;
+    std::vector<int> parameterTypes;
     std::vector<int> intParameters;
     std::vector<bool> boolParameters;
 
@@ -29,7 +31,7 @@ class Entry{
 struct CompareDate {
     bool operator()(Entry const& e1, Entry const& e2)
     {
-        return e1.getPriority() > e2.getPriority();
+        return e1.getTime() > e2.getTime();
     }
 };
 

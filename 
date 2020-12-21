@@ -1,0 +1,21 @@
+[0;1;32m●[0m bluetooth.service - Bluetooth service
+     Loaded: loaded (/usr/lib/systemd/system/bluetooth.service; disabled; vendor preset: disabled)
+     Active: [0;1;32mactive (running)[0m since Mon 2020-12-21 13:52:48 MST; 8s ago
+       Docs: man:bluetoothd(8)
+   Main PID: 42254 (bluetoothd)
+     Status: "Running"
+      Tasks: 1 (limit: 9379)
+     Memory: 816.0K
+     CGroup: /system.slice/bluetooth.service
+             └─42254 /usr/lib/bluetooth/bluetoothd
+
+Dec 21 13:52:48 Qyeet bluetoothd[42254]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185msrc/main.c:parse_controller_config() Key file does not have key “LEScanIntervalConnect” in group “Controller”[0m
+Dec 21 13:52:48 Qyeet bluetoothd[42254]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185msrc/main.c:parse_controller_config() Key file does not have key “LEScanWindowConnect” in group “Controller”[0m
+Dec 21 13:52:48 Qyeet bluetoothd[42254]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185msrc/main.c:parse_controller_config() Key file does not have key “LEMinConnectionInterval” in group “Controller”[0m
+Dec 21 13:52:48 Qyeet bluetoothd[42254]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185msrc/main.c:parse_controller_config() Key file does not have key “LEMaxConnectionInterval” in group “Controller”[0m
+Dec 21 13:52:48 Qyeet bluetoothd[42254]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185msrc/main.c:parse_controller_config() Key file does not have key “LEConnectionLatency” in group “Controller”[0m
+Dec 21 13:52:48 Qyeet bluetoothd[42254]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185msrc/main.c:parse_controller_config() Key file does not have key “LEConnectionSupervisionTimeout” in group “Controller”[0m
+Dec 21 13:52:48 Qyeet bluetoothd[42254]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185msrc/main.c:parse_controller_config() Key file does not have key “LEAutoconnecttimeout” in group “Controller”[0m
+Dec 21 13:52:48 Qyeet systemd[1]: Started Bluetooth service.
+Dec 21 13:52:48 Qyeet bluetoothd[42254]: Starting SDP server
+Dec 21 13:52:48 Qyeet bluetoothd[42254]: Bluetooth management interface 1.18 initialized
