@@ -7,9 +7,14 @@
 class Parameter{
 public:
     Parameter(QString name);
+    auto getname() const {return _name; }
+    auto getValue() const { return _value; }
+    auto getWeight() const {return _weight;}
 private:
+
     QString _name;
-    type _type;
+    float _value;
+    float _weight;
 };
 
 #endif // PARAMETER_H

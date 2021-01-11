@@ -4,6 +4,7 @@
 #include <QString>
 #include <chrono>
 #include "enums.h"
+#include "Parameter.h"
 
 
 class Entry{
@@ -11,7 +12,7 @@ class Entry{
     Entry(QString title);
 
     int getTime() const {return deltaTime; }
-    int getPriority();
+    float getPriority() const;
     QString getTitle() const {return title; }
 
     private:
@@ -19,17 +20,13 @@ class Entry{
     QString title;
     int deltaTime;
     int intParameterSize = 0;
-    std::unordered_map<std::string,int> parameters;
-    std::vector<type> parameterTypes;
-    std::vector<int> intParameters;
-    std::vector<bool> boolParameters;
-
+    std::vector<Parameter> parameters;
 };
 
 struct CompareDate {
     bool operator()(Entry const& e1, Entry const& e2)
     {
-        return e1.getPriority() > e2.getPriority();
+        return e1.getTime() > e2.getTime();
     }
 };
 

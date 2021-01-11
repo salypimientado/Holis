@@ -4,11 +4,13 @@
 
 Entry::Entry(QString title){
     this->title = title;
-    deltaTime = std::time(0);
-    std::vector<std::string> defParameters = {"Difficulty","Length","TaskSavvyness","Difficulty"};
-    parameterTypes = {integer, 0, 0, 0,};
-    for(unsigned int i = 0; i< defParameters.size();i++){
-        parameters.insert(std::make_pair(defParameters[i],i));
+    deltaTime = time(0);
+}
 
+float Entry::getPriority() const {
+    int val = 1;
+    for(unsigned int i = 0; i< parameters.size();i++){
+        val = val * parameters[i].getWeight() * parameters[i].getValue();
     }
+    return deltaTime;
 }
