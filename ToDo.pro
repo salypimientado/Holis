@@ -10,16 +10,21 @@ CONFIG += c++11
 
 SOURCES += \
     Entry.cpp \
+    addwindow.cpp \
+    entrytemplate.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     Entry.h \
     Parameter.h \
+    addwindow.h \
+    entrytemplate.h \
     enums.h \
     mainwindow.h
 
 FORMS += \
+    addwindow.ui \
     mainwindow.ui
 
 # Default rules for deployment.
