@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     Entry.cpp \
+    addtemplatewindow.cpp \
     addwindow.cpp \
     entrytemplate.cpp \
     main.cpp \
@@ -18,6 +19,7 @@ SOURCES += \
 HEADERS += \
     Entry.h \
     Parameter.h \
+    addtemplatewindow.h \
     addwindow.h \
     entrytemplate.h \
     enums.h \

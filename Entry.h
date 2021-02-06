@@ -5,6 +5,7 @@
 #include <chrono>
 #include "enums.h"
 #include "Parameter.h"
+#include "entrytemplate.h"
 
 
 class Entry{
@@ -12,11 +13,7 @@ class Entry{
     Entry(QString title);
 
     int getTime() const {return deltaTime; }
-<<<<<<< HEAD
-    int getPriority();
-=======
     float getPriority() const;
->>>>>>> fc1efc793ff4a2fc0ce84c862b1c9b10e60f500d
     QString getTitle() const {return title; }
 
     private:

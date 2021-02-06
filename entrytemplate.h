@@ -4,6 +4,8 @@
 #include "enums.h"
 #include <vector>
 #include <QString>
+#include <QJsonObject>
+#include <QJsonArray>
 
 class EntryTemplate
 {
@@ -12,9 +14,12 @@ public:
     auto getParameterNames();
     auto getWeights();
     auto getTypes();
-    void write();
+    auto name() const;
+    int size() const;
+    void write(QJsonObject &json) const;
 
 private:
+    QString _name;
     std::vector<QString> parameterNames;
     std::vector<float> parameterWeights;
     std::vector<type> parameterTypes;

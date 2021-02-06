@@ -21,6 +21,7 @@ public:
 private:
     Ui::MainWindow *ui;
     std::priority_queue<Entry,std::vector<Entry>,CompareDate> queue;
+    std::vector<EntryTemplate> templates;
 private slots:
     void saveEntry();
     void removeEntry();
