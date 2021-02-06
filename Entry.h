@@ -11,7 +11,7 @@ class Entry{
     Entry(QString title);
 
     int getTime() const {return deltaTime; }
-    int getPriority();
+    int getPriority() const;
     QString getTitle() const {return title; }
 
     private:
